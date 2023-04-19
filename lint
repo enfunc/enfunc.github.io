@@ -1,0 +1,29 @@
+#!/bin/bash
+
+check_file() {
+  FILE_PATH="$1"
+  START="$2"
+  if [ ! -e "$FILE_PATH" ] || [[ "$(head -n 1 "$FILE_PATH")" != "$START"* ]]; then
+    return 1
+  else
+    return 0
+  fi
+}
+
+curl -s -H "Content-Type: text/html" -H "charset=utf-8" -X POST --data-binary "@index.html" https://validator.w3.org/nu/?out=gnu >validation_result.txt
+if grep -q "error" validation_result.txt; then
+  echo "HTML validation failed. Please check 'validation_result.txt' for details."
+  exit 1
+else
+  rm validation_result.txt
+fi
+
+if ! check_file "style.min.css" "body,h1,h2{margin:0}"; then
+  echo 'Invalid CSS'
+  exit 1
+fi
+
+if ! check_file "script.min.js" "function k()"; then
+  echo 'Invalid JS'
+  exit 1
+fi

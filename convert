@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -lt 3 ]; then
+  echo "Usage: $0 width height input_file1 [input_file2 ...]"
+  exit 1
+fi
+
+WIDTH=$1
+HEIGHT=$2
+shift 2
+
+DIR=$(dirname "$0")
+for input_file in "$@"; do
+  output_file="logo_$(basename "$input_file")"
+  convert "$input_file" -strip -define png:compression-level=8 -fill black -colorize 100% -resize "${WIDTH}x${HEIGHT}>" "${DIR}/$output_file"
+done
