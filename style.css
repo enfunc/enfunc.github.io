@@ -2,7 +2,7 @@
   --color-dark: #333333;
   --color-light: #F3FFF6;
   --color-accent: #B2EFC1;
-  --color-complement: #C7A4D6;
+  --color-complement: #E4D9FF;
   --font-content: 'Schibsted Grotesk', sans-serif;
   --font-heading: 'Bayon', sans-serif;
   --padding-default: 2em;
@@ -175,7 +175,6 @@ form button:hover {
   background: var(--color-accent);
 }
 .form-status {
-  color: var(--color-light);
   text-align: center;
   font-family: var(--font-heading);
 }

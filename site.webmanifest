@@ -1,0 +1,21 @@
+{
+  "name": "Enfunc",
+  "short_name": "Enfunc",
+  "description": "Enfunc provides top-notch software engineering, advisory, and funding support to help unlock your business's full potential.",
+  "theme_color": "#B2EFC1",
+  "background_color": "#FFFFFF",
+  "display": "browser",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "media/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "media/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
