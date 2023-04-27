@@ -22,7 +22,10 @@ function loadImage(src, cb) {
 
 function isNetworkFast() {
   const conn = navigator.connection;
-  return conn && (conn.type === 'wifi' || conn.type === 'ethernet' || conn.effectiveType === '4g');
+  if (conn) {
+    return conn.type === 'wifi' || conn.type === 'ethernet' || conn.effectiveType === '4g';
+  }
+  return true;
 }
 
 function backgroundImage(base = window.location.href) {
