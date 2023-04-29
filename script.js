@@ -5,10 +5,10 @@ async function sendForm(event) {
       method: method,
       body: new FormData(event.target),
       headers: {
-        'Accept': 'application/json'
-      }
+        'Accept': 'application/json',
+      },
     });
-    return response.ok
+    return response.ok;
   } catch (error) { // ¯\_(ツ)_/¯
   }
   return false;
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       main.style.background = 'none';
     }
-  }
+  };
   screenQuery.addEventListener('change', updateBackground);
   updateBackground(screenQuery);
 
