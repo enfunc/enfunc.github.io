@@ -17,10 +17,10 @@
   <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Schibsted+Grotesk&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bayon&family=Schibsted+Grotesk&display=swap">
   <link rel="stylesheet" href="style.min.css">
   <script src="https://kit.fontawesome.com/21547d334e.js" crossorigin="anonymous"></script>
   <script src="https://js.sentry-cdn.com/6d72b914e64e4d3c8488bbc1d22a2f75.min.js" crossorigin="anonymous"></script>
@@ -80,7 +80,7 @@
       </div>
     </div>
     <div class="cta">
-      <button class="cta-button"><i class="fa-solid fa-comments"></i> Let's chat</button>
+      <button type="button" class="cta-button"><i class="fa-solid fa-comments"></i> Let's chat</button>
     </div>
     <div class="contact-overlay">
       <div class="contact">
@@ -89,10 +89,10 @@
           <div class="close"><i class="fa-solid fa-xmark"></i></div>
         </div>
         <form class="form" action="https://formspree.io/f/moqzkrzl" method="POST">
-          <input type="email" name="email" id="email" required placeholder="Your Email"/>
+          <input type="email" name="email" id="email" required placeholder="Your Email">
           <textarea rows="5" name="message" id="message" required placeholder="What can we help you with?"></textarea>
           <p class="form-status"></p>
-          <button id="submit">Send</button>
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
@@ -105,23 +105,24 @@
       exceptional delivery. Some of our past and present clients include:
     </p>
     <div class="logos">
-      <img src="media/logo_desy.png" alt="DESY"/>
-      <img src="media/logo_wemoney.png" alt="WeMoney"/>
-      <img src="media/logo_stars.png" alt="The Stars Group"/>
-      <img src="media/logo_lloyds.png" alt="Lloyds Banking Group"/>
-      <img src="media/logo_nhs.png" alt="NHS"/>
-      <img src="media/logo_pfizer.png" alt="Pfizer"/>
-      <img src="media/logo_auth0.png" alt="Auth0"/>
-      <img src="media/logo_celtra.png" alt="Celtra"/>
-      <img src="media/logo_shortcut.png" alt="Shortcut"/>
-      <img src="media/logo_kodeco.png" alt="Kodeco"/>
-      <img src="media/logo_modfi.png" alt="ModFi"/>
+      <img src="media/logo_desy.png" alt="DESY">
+      <img src="media/logo_wemoney.png" alt="WeMoney">
+      <img src="media/logo_stars.png" alt="The Stars Group">
+      <img src="media/logo_lloyds.png" alt="Lloyds Banking Group">
+      <img src="media/logo_nhs.png" alt="NHS">
+      <img src="media/logo_pfizer.png" alt="Pfizer">
+      <img src="media/logo_auth0.png" alt="Auth0">
+      <img src="media/logo_array.png" alt="Array">
+      <img src="media/logo_celtra.png" alt="Celtra">
+      <img src="media/logo_shortcut.png" alt="Shortcut">
+      <img src="media/logo_kodeco.png" alt="Kodeco">
+      <img src="media/logo_modfi.png" alt="ModFi">
     </div>
     <p class="copy">&copy; <span class="year"></span> Enfunc. All rights reserved.</p>
   </footer>
 </div>
 <script src="script.min.js"></script>
-<script type="text/javascript">
+<script>
   (function(window, document, dataLayerName, id) {
     window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
     function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}

@@ -1,0 +1,42 @@
+{
+  "name": "enfunc",
+  "version": "1.0.0",
+  "description": "The enfunc.com website",
+  "private": true,
+  "scripts": {
+    "min:css": "cleancss -O2 'all:on' style.css -o style.min.css",
+    "min:js": "google-closure-compiler -O ADVANCED --js=script.js --js_output_file=script.min.js",
+    "set:min": "sed -i '' 's/style\\.css/style.min.css/g; s/script\\.js/script.min.js/g' index.html",
+    "set:plain": "sed -i '' 's/style\\.min\\.css/style.css/g; s/script\\.min\\.js/script.js/g' index.html",
+    "lint:html": "html-validate *.html",
+    "lint:css": "stylelint style.css",
+    "lint:js": "eslint script.js",
+    "test": "jest",
+    "ci": "npm run lint:html && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enfunc/enfunc.github.io.git"
+  },
+  "author": "enfunc",
+  "bugs": {
+    "url": "https://github.com/enfunc/enfunc.github.io/issues"
+  },
+  "homepage": "https://github.com/enfunc/enfunc.github.io#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "eslint": "^8.39.0",
+    "eslint-config-google": "^0.14.0",
+    "google-closure-compiler": "^20230411.0.0",
+    "html-validate": "^7.15.1",
+    "http-server": "^14.1.1",
+    "jest": "^29.5.0",
+    "jest-puppeteer": "^8.0.6",
+    "puppeteer": "^19.11.1",
+    "stylelint": "^15.6.0",
+    "stylelint-config-recommended": "^12.0.0"
+  },
+  "jest": {
+    "preset": "jest-puppeteer"
+  }
+}

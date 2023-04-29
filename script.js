@@ -5,10 +5,10 @@ async function sendForm(event) {
       method: method,
       body: new FormData(event.target),
       headers: {
-        'Accept': 'application/json'
-      }
+        'Accept': 'application/json',
+      },
     });
-    return response.ok
+    return response.ok;
   } catch (error) { // ¯\_(ツ)_/¯
   }
   return false;
@@ -22,7 +22,10 @@ function loadImage(src, cb) {
 
 function isNetworkFast() {
   const conn = navigator.connection;
-  return conn && (conn.type === 'wifi' || conn.type === 'ethernet' || conn.effectiveType === '4g');
+  if (conn) {
+    return conn.type === 'wifi' || conn.type === 'ethernet' || conn.effectiveType === '4g';
+  }
+  return true;
 }
 
 function backgroundImage(base = window.location.href) {
@@ -43,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       main.style.background = 'none';
     }
-  }
+  };
   screenQuery.addEventListener('change', updateBackground);
   updateBackground(screenQuery);
 
