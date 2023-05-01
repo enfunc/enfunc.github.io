@@ -11,8 +11,9 @@
     "lint:html": "html-validate *.html",
     "lint:css": "stylelint style.css",
     "lint:js": "eslint script.js",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "test": "jest",
-    "ci": "npm run lint:html && npm run test"
+    "ci": "npm run lint && npm run test"
   },
   "repository": {
     "type": "git",
