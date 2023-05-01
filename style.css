@@ -2,7 +2,7 @@
   --color-dark: #333333;
   --color-light: #F3FFF6;
   --color-accent: #B2EFC1;
-  --color-complement: #E4D9FF;
+  --color-complement: #EFB2E0;
   --font-content: 'Schibsted Grotesk', sans-serif;
   --font-heading: 'Bayon', sans-serif;
   --padding-default: 2em;
@@ -55,9 +55,6 @@ main {
   flex: 1;
 }
 @media (max-width: 64em) {
-  h2 {
-    font-size: 2em;
-  }
   .services {
     flex-direction: column;
   }
@@ -65,11 +62,7 @@ main {
     text-align: left;
   }
 }
-@media (max-width: 40em) {
-  .contact-title h2 {
-    font-size: 1.5em;
-  }
-}
+
 .cta {
   padding: var(--padding-default);
   padding-top: 0;
@@ -78,6 +71,7 @@ main {
   flex: 2;
 }
 .cta-button {
+  color: var(--color-dark);
   background: var(--color-accent);
   border-radius: 2em;
   border: none;
@@ -137,6 +131,11 @@ footer {
   opacity: 98%;
   border-radius: 1em;
 }
+@media (max-width: 38em) {
+  .contact {
+    width: 98%;
+  }
+}
 .close {
   margin: 0;
   padding: 0;
@@ -169,10 +168,10 @@ form button {
   border: none;
   border-radius: 1em;
   margin: auto;
-  background: var(--color-light);
+  background: var(--color-accent);
 }
 form button:hover {
-  background: var(--color-accent);
+  background: var(--color-light);
 }
 .form-status {
   text-align: center;

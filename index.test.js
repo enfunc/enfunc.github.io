@@ -17,7 +17,7 @@ const content = {
   logos: 12,
   cta: " Let's chat",
   accentColor: "rgb(178, 239, 193)",
-  complementColor: "rgb(228, 217, 255)",
+  complementColor: "rgb(239, 178, 224)",
 }
 
 const getText = async (selector) => await page.$eval(selector, el => el.textContent);
