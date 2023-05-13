@@ -106,16 +106,13 @@ describe('Enfunc', () => {
 
   test('has the expected JS', async () => {
     const js = [
-      'https://enfunc.containers.piwik.pro/ppms.js',
-      'https://browser.sentry-cdn.com/7.50.0/bundle.tracing.replay.min.js',
-      'https://enfunc.containers.piwik.pro/4466da6e-a361-42fc-8ea2-e93fc3e9c75b.js',
       'https://kit.fontawesome.com/21547d334e.js',
       'https://js.sentry-cdn.com/6d72b914e64e4d3c8488bbc1d22a2f75.min.js',
       `${baseUrl}/script.min.js`,
-    ];
-    const srcs = await page.$$eval('script', els => els.map((el) => el.src));
-    for (const src of srcs) {
-      if (src) expect(js).toContain(src);
+    ]
+    const sources = await page.$$eval('script', els => els.map((el) => el.src));
+    for (const src of js) {
+      expect(sources).toContain(src);
     }
   });
 
