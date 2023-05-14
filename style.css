@@ -142,6 +142,7 @@ footer {
 }
 .close:hover {
   color: var(--color-light);
+  cursor: pointer;
 }
 .contact-title {
   display: flex;
@@ -171,6 +172,7 @@ form button {
 }
 form button:hover {
   background: var(--color-light);
+  cursor: pointer;
 }
 .form-status {
   text-align: center;
