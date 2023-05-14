@@ -1,0 +1,8 @@
+.idea
+.git
+.gitignore
+.github
+Dockerfile
+bin
+media/original
+node_modules
