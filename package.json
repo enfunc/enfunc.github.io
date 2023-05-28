@@ -6,6 +6,7 @@
   "scripts": {
     "min:css": "cleancss -O2 'all:on' style.css -o style.min.css",
     "min:js": "google-closure-compiler -O ADVANCED --js=script.js --js_output_file=script.min.js",
+    "min": "npm run lint && npm run min:css && npm run min:js",
     "set:min": "sed -i '' 's/style\\.css/style.min.css/g; s/script\\.js/script.min.js/g' index.html",
     "set:plain": "sed -i '' 's/style\\.min\\.css/style.css/g; s/script\\.min\\.js/script.js/g' index.html",
     "lint:html": "html-validate *.html",
@@ -13,7 +14,9 @@
     "lint:js": "eslint script.js",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "test": "jest",
-    "ci": "npm run lint && npm run test"
+    "ci": "npm run lint && npm run test",
+    "build": "docker build -t enfunc .",
+    "run": "docker run --rm -p 8080:8080 enfunc"
   },
   "repository": {
     "type": "git",
@@ -35,7 +38,7 @@
     "jest-puppeteer": "^8.0.6",
     "puppeteer": "^19.11.1",
     "stylelint": "^15.6.0",
-    "stylelint-config-recommended": "^12.0.0"
+    "stylelint-config-standard": "^33.0.0"
   },
   "jest": {
     "preset": "jest-puppeteer"

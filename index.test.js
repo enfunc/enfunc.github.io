@@ -8,16 +8,16 @@ const serve = (port, root = './') => {
 
 const content = {
   name: 'Enfunc',
-  desc: "Enfunc provides top-notch software engineering, advisory, and funding support to help unlock your business's full potential.",
+  punchline: 'Unleashing potential, accelerating progress',
+  desc: "Enfunc is a global tech consultancy specializing in tailored digital solutions, advisory, startup guidance, and funding, enabling businesses to thrive in the digital era.",
   url: "https://www.enfunc.com",
   logo: "https://www.enfunc.com/media/enfunc.png",
-  title: 'Enfunc | Top-tier software, creativity, and zest.',
-  services: [' We code', ' We advise', ' We invest'],
+  title: 'Enfunc | Unleashing potential, accelerating progress',
+  nav: ['What we do', 'Why us', 'Get in touch'],
+  services: ['We code', 'We advise', 'We invest'],
   formUrl: 'https://formspree.io/f/moqzkrzl',
-  logos: 12,
-  cta: " Let's chat",
-  accentColor: "rgb(178, 239, 193)",
-  complementColor: "rgb(239, 178, 224)",
+  logos: 11,
+  accentColor: "#B2EFC1",
 }
 
 const getText = async (selector) => await page.$eval(selector, el => el.textContent);
@@ -106,7 +106,6 @@ describe('Enfunc', () => {
 
   test('has the expected JS', async () => {
     const js = [
-      'https://kit.fontawesome.com/21547d334e.js',
       'https://js.sentry-cdn.com/6d72b914e64e4d3c8488bbc1d22a2f75.min.js',
       `${baseUrl}/script.min.js`,
     ]
@@ -116,16 +115,22 @@ describe('Enfunc', () => {
     }
   });
 
-  test('has the correct header', async () => {
+  test('has the hero page', async () => {
     const h1 = await getText('h1');
     expect(h1).toBe(content.name);
 
-    const bg = await getStyleProperty('header', 'background-color');
-    expect(bg).toBe(content.accentColor);
+    const h2 = await getText('h2');
+    expect(h2).toBe(content.punchline);
+
+    const txt = await getText('.hero p');
+    expect(txt.length).toBeGreaterThan(100);
+
+    const texts = await page.$$eval('.nav a', els => els.map(el => el.textContent));
+    expect(texts).toEqual(content.nav);
   });
 
   test('has the correct services', async () => {
-    const headings = await page.$$eval('.services h2', els => els.map(el => el.textContent));
+    const headings = await page.$$eval('.services h3', els => els.map(el => el.textContent));
     expect(headings).toEqual(content.services);
 
     const paras = await page.$$eval('.services p', els => els.map(el => el.textContent));
@@ -134,27 +139,11 @@ describe('Enfunc', () => {
     })
   });
 
-  const ctaSelector = '.cta-button';
-
-  test('has the correct CTA button', async () => {
-    const bg = async () => await getStyleProperty(ctaSelector, 'background-color');
-
-    const text = await getText(ctaSelector);
-    expect(text).toBe(content.cta);
-
-    expect(await bg()).toBe(content.accentColor);
-    await page.hover(ctaSelector);
-    expect(await bg()).toBe(content.complementColor);
-  });
-
-  test('has the expected CTA functionality', async () => {
-    const display = async () => await page.$eval('.contact-overlay', el => el.style.display);
-
-    expect(await display()).toBe('');
-    await page.click(ctaSelector);
-    expect(await display()).toBe('block');
-    await page.click('.close');
-    expect(await display()).toBe('none');
+  test('has the correct us page', async () => {
+    const paras = await page.$$eval('.us p', els => els.map(el => el.textContent));
+    paras.forEach((p) => {
+      expect(p.length).toBeGreaterThan(75);
+    })
   });
 
   test('has the correct contact form', async () => {
@@ -163,19 +152,22 @@ describe('Enfunc', () => {
 
     const method = await getAttr('form', 'method');
     expect(method).toBe('POST');
+
+    const send = await getText('button[type="submit"]');
+    expect(send).toBe('Send');
   });
 
   test('has the correct number of logos', async () => {
-    const logos = await page.$$('.logos img');
+    const logos = await page.$$('.footer .logos img');
     expect(logos.length).toBe(content.logos);
   });
 
   test('has the correct footer', async () => {
-    const text = await getText('footer p');
+    const text = await getText('.footer p');
     expect(text.length).toBeGreaterThan(400);
 
     const year = new Date().getFullYear();
     const copy = await getText('.copy');
-    expect(copy).toBe(`© ${year} ${content.name}. All rights reserved.`);
+    expect(copy).toBe(`© ${year} ${content.name} AS. All rights reserved.`);
   });
 });
