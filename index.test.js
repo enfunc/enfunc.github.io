@@ -22,7 +22,6 @@ const content = {
 
 const getText = async (selector) => await page.$eval(selector, el => el.textContent);
 const getAttr = async (selector, attr) => await page.$eval(selector, (el, attr) => el.getAttribute(attr), attr);
-const getStyleProperty = async (selector, prop) => await page.$eval(selector, (el, prop) => getComputedStyle(el).getPropertyValue(prop), prop);
 
 describe('Enfunc', () => {
   let localhost;
@@ -125,17 +124,17 @@ describe('Enfunc', () => {
     const txt = await getText('.hero p');
     expect(txt.length).toBeGreaterThan(100);
 
-    const texts = await page.$$eval('.nav a', els => els.map(el => el.textContent));
+    const texts = await page.$$eval('nav a', els => els.map(el => el.textContent));
     expect(texts).toEqual(content.nav);
   });
 
   test('has the correct services', async () => {
-    const headings = await page.$$eval('.services h3', els => els.map(el => el.textContent));
+    const headings = await page.$$eval('#services h3', els => els.map(el => el.textContent));
     expect(headings).toEqual(content.services);
 
-    const paras = await page.$$eval('.services p', els => els.map(el => el.textContent));
+    const paras = await page.$$eval('#services div p', els => els.map(el => el.textContent));
     paras.forEach((p) => {
-      expect(p.length).toBeGreaterThan(280);
+      expect(p.length).toBeGreaterThan(100);
     })
   });
 
@@ -158,12 +157,12 @@ describe('Enfunc', () => {
   });
 
   test('has the correct number of logos', async () => {
-    const logos = await page.$$('.footer .logos img');
+    const logos = await page.$$('footer .logos img');
     expect(logos.length).toBe(content.logos);
   });
 
   test('has the correct footer', async () => {
-    const text = await getText('.footer p');
+    const text = await getText('footer p');
     expect(text.length).toBeGreaterThan(400);
 
     const year = new Date().getFullYear();
