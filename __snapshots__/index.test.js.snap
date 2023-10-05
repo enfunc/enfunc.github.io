@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Enfunc matches snapshot 1`] = `
+"<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -67,3 +70,5 @@ if (window.location.origin.includes("enfunc.com")) {
 </script>
 </body>
 </html>
+"
+`;
