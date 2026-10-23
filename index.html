@@ -76,6 +76,7 @@ main{position:relative;z-index:2;height:100vh;height:100svh;display:grid;place-i
 .btn::after{content:"";position:absolute;left:2px;right:2px;bottom:10px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .7s cubic-bezier(.2,.7,.1,1)}
 .btn:focus-visible::after{transform:scaleX(1);transform-origin:left}
 [hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 dialog{position:fixed;inset:0;width:100%;height:100%;max-width:100%;max-height:100%;margin:0;padding:0;border:0;background:none;color:inherit;overflow:auto;overscroll-behavior:contain;outline:none}
 dialog[open]{display:flex}
 dialog::backdrop{background:transparent}
@@ -120,20 +121,20 @@ dialog::backdrop{background:transparent}
 }
 .nogsap .l,.nogsap .w,.nogsap .foot{opacity:1;transform:none}
 </style>
-<noscript><style>.l,.w,.foot{opacity:1!important;transform:none!important}</style></noscript>
+<noscript><style>.l,.w,.foot{opacity:1!important;transform:none!important}.foot .btn[data-open],.foot i{display:none}</style></noscript>
 <script>window.__enf=setTimeout(function(){document.documentElement.classList.add('nogsap')},5000)</script>
 </head>
 <body>
 <canvas id="bg"></canvas>
 <canvas id="threads"></canvas>
 <main>
-  <h1 class="mark" aria-label="Enfunc">
-    <span class="l" data-fx="weight" aria-hidden="true"><span class="g" data-ch="E">E<i class="bl"></i></span></span><span class="l" data-fx="magnet" aria-hidden="true"><span class="g" data-ch="n">n<i class="bl"></i></span></span><span class="l" data-fx="chroma" aria-hidden="true"><span class="g" data-ch="f">f<i class="bl"></i></span></span><span class="l" data-fx="liquid" aria-hidden="true"><span class="g" data-ch="u">u<i class="bl"></i></span></span><span class="l" data-fx="scatter" aria-hidden="true"><span class="g" data-ch="n">n<i class="bl"></i></span></span><span class="l" data-fx="spin" aria-hidden="true"><span class="g" data-ch="c">c<i class="bl"></i></span></span>
+  <h1 class="mark">
+    <span class="sr">Enfunc</span><span class="l" data-fx="weight" aria-hidden="true"><span class="g" data-ch="E">E<i class="bl"></i></span></span><span class="l" data-fx="magnet" aria-hidden="true"><span class="g" data-ch="n">n<i class="bl"></i></span></span><span class="l" data-fx="chroma" aria-hidden="true"><span class="g" data-ch="f">f<i class="bl"></i></span></span><span class="l" data-fx="liquid" aria-hidden="true"><span class="g" data-ch="u">u<i class="bl"></i></span></span><span class="l" data-fx="scatter" aria-hidden="true"><span class="g" data-ch="n">n<i class="bl"></i></span></span><span class="l" data-fx="spin" aria-hidden="true"><span class="g" data-ch="c">c<i class="bl"></i></span></span>
   </h1>
   <p class="tag"><span class="w">Great</span> <span class="w">ideas,</span> <em class="w">great</em> <em class="w">engineering.</em></p>
 </main>
 <canvas id="fx" width="0" height="0"></canvas>
-<footer class="foot"><button class="btn" type="button" data-open="about" aria-haspopup="dialog">What we do</button><i aria-hidden="true"></i><button class="btn" type="button" data-open="contact" aria-haspopup="dialog">Get in touch</button></footer>
+<footer class="foot"><button class="btn" type="button" data-open="about" aria-haspopup="dialog">What we do</button><i aria-hidden="true"></i><button class="btn" type="button" data-open="contact" aria-haspopup="dialog">Get in touch</button><noscript><a class="btn" href="mailto:hello@enfunc.com">hello@enfunc.com</a></noscript></footer>
 <dialog id="about" aria-labelledby="ab-k">
   <div class="ab-disc" aria-hidden="true"></div>
   <div class="ab-glow" aria-hidden="true"></div>
@@ -662,5 +663,6 @@ function start() {
 Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 1800))]).then(() => requestAnimationFrame(start));
 })();
 </script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "702790b9d58a49ddb154049e87d61afa"}'></script>
 </body>
 </html>
