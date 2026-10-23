@@ -1,69 +1,666 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Enfunc is a global tech consultancy specializing in tailored digital solutions, advisory, startup guidance, and funding, enabling businesses to thrive in the digital era.">
-
-  <meta property="og:title" content="Enfunc | Unleashing potential, accelerating progress">
-  <meta property="og:description" content="Enfunc is a global tech consultancy specializing in tailored digital solutions, advisory, startup guidance, and funding, enabling businesses to thrive in the digital era.">
-  <meta property="og:image" content="https://www.enfunc.com/media/enfunc.png">
-  <meta property="og:url" content="https://www.enfunc.com">
-  <meta property="og:type" content="website">
-
-  <title>Enfunc | Unleashing potential, accelerating progress</title>
-
-  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiRW5mdW5jIiwic2hvcnRfbmFtZSI6IkVuZnVuYyIsImRlc2NyaXB0aW9uIjoiRW5mdW5jIGlzIGEgZ2xvYmFsIHRlY2ggY29uc3VsdGFuY3kgc3BlY2lhbGl6aW5nIGluIHRhaWxvcmVkIGRpZ2l0YWwgc29sdXRpb25zLCBhZHZpc29yeSwgc3RhcnR1cCBndWlkYW5jZSwgYW5kIGZ1bmRpbmcsIGVuYWJsaW5nIGJ1c2luZXNzZXMgdG8gdGhyaXZlIGluIHRoZSBkaWdpdGFsIGVyYS4iLCJ0aGVtZV9jb2xvciI6IiNCMkVGQzEiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI0ZGRkZGRiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwib3JpZW50YXRpb24iOiJwb3J0cmFpdCIsInNjb3BlIjoiLyIsInN0YXJ0X3VybCI6Ii8iLCJpY29ucyI6W3sic3JjIjoibWVkaWEvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiJtZWRpYS9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsInNpemVzIjoiNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9wbmcifV19">
-  <link rel="icon" href="media/favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bayon&family=Oswald&family=Playfair+Display&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
-  <style>*{box-sizing:border-box}body{background:url('/media/bg.webp');background-size:cover;color:#000;width:100vw;height:100vh;overflow-x:hidden}main{display:flex;align-items:center;height:100vh;width:100vw}section{background:#b2efc1;margin:3em;padding:3em;width:75%;opacity:.9;box-shadow:0 1px 2px 0 rgb(60 64 67 / 30%),0 4px 8px 4px rgb(60 64 67 / 15%)}a,h1,h2{margin:0;padding:0;text-decoration:none}a{font-family:Oswald,sans-serif;color:#000}h1{font-family:Bayon,cursive;font-size:10em}h2{font-family:Oswald,sans-serif;font-size:4em;margin-top:-.5em}p{font-family:'Playfair Display',serif;font-size:1.67em}.logos{margin-top:3em;display:flex;justify-content:space-evenly;gap:1em;flex-flow:row wrap}img{max-height:2.5em}a:hover,img:hover{opacity:.75}@media screen and (max-width:800px){h1{font-size:8em}h2{font-size:3em}section{width:95%;margin:1em;padding:1em}}</style>
-
-  <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Enfunc",
-  "url": "https://www.enfunc.com",
-  "logo": "https://www.enfunc.com/media/enfunc.png",
-  "description": "Enfunc is a global tech consultancy specializing in tailored digital solutions, advisory, startup guidance, and funding, enabling businesses to thrive in the digital era.",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "hello@enfunc.com"
-  }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Enfunc — Product &amp; software engineering from Oslo</title>
+<meta name="description" content="Enfunc is an Oslo-based product company. We build software and help teams solve tough technical challenges: architecture, AI/ML, web and mobile apps.">
+<link rel="canonical" href="https://enfunc.com/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Enfunc">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f6f1ea">
+<meta name="application-name" content="Enfunc">
+<meta name="apple-mobile-web-app-title" content="Enfunc">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Enfunc">
+<meta property="og:url" content="https://enfunc.com/">
+<meta property="og:title" content="Enfunc — Great ideas, great engineering.">
+<meta property="og:description" content="An Oslo-based product company. We build software and help teams solve their toughest technical challenges.">
+<meta property="og:image" content="https://enfunc.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Enfunc — Great ideas, great engineering.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enfunc — Great ideas, great engineering.">
+<meta name="twitter:description" content="An Oslo-based product company. We build software and help teams solve their toughest technical challenges.">
+<meta name="twitter:image" content="https://enfunc.com/og-image.png">
+<meta name="twitter:image:alt" content="Enfunc — Great ideas, great engineering.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="/logo.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://enfunc.com/#org","name":"Enfunc","url":"https://enfunc.com/","logo":{"@type":"ImageObject","url":"https://enfunc.com/logo.png","width":512,"height":512},"image":"https://enfunc.com/og-image.png","slogan":"Great ideas, great engineering.","description":"Enfunc is an Oslo-based product company. We build software and help teams solve tough technical challenges.","email":"hello@enfunc.com","address":{"@type":"PostalAddress","addressLocality":"Oslo","addressCountry":"NO"},"areaServed":"Worldwide","knowsAbout":["Software engineering","Product development","Technical consulting","Software architecture","Artificial intelligence","Machine learning","Web applications","Mobile applications"],"contactPoint":{"@type":"ContactPoint","contactType":"general inquiries","email":"hello@enfunc.com","availableLanguage":["English","Norwegian"]},"sameAs":["https://github.com/enfunc"]},
+{"@type":"WebSite","@id":"https://enfunc.com/#website","url":"https://enfunc.com/","name":"Enfunc","inLanguage":"en","publisher":{"@id":"https://enfunc.com/#org"}},
+{"@type":"WebPage","@id":"https://enfunc.com/#webpage","url":"https://enfunc.com/","name":"Enfunc — Product & software engineering from Oslo","description":"Enfunc is an Oslo-based product company. We build software and help teams solve tough technical challenges: architecture, AI/ML, web and mobile apps.","inLanguage":"en","isPartOf":{"@id":"https://enfunc.com/#website"},"about":{"@id":"https://enfunc.com/#org"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://enfunc.com/og-image.png","width":1200,"height":630}}
+]}
+</script>
+<link rel="me" href="https://github.com/enfunc">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Geist:wght@300;400&family=Geist+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c1a19;--paper:#f6f1ea;--pad:clamp(28px,5vw,44px)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden;overscroll-behavior:none;background:var(--paper);color:var(--ink)}
+html.nogl body{background:radial-gradient(60% 70% at 20% 30%,#f9d9c8,transparent),radial-gradient(60% 70% at 80% 70%,#d9d4f4,transparent),var(--paper)}
+body{font-family:Geist,system-ui,sans-serif;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--ink)}
+::selection{background:var(--ink);color:var(--paper)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-appearance:none;appearance:none}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+#bg{z-index:0}
+#threads{z-index:1;opacity:0}
+#fx{z-index:3;visibility:hidden}
+main{position:relative;z-index:2;height:100vh;height:100svh;display:grid;place-items:center;align-content:center;gap:clamp(14px,2.4vw,34px);padding:24px;text-align:center;contain:layout;touch-action:none;-webkit-touch-callout:none}
+.mark{font-family:"Bodoni Moda",Didot,serif;font-weight:400;font-size:clamp(4.4rem,21vw,17rem);font-size:clamp(4.4rem,min(21vw,40svh),17rem);line-height:.92;letter-spacing:-.01em;white-space:nowrap;font-kerning:normal}
+.l{display:inline-block;opacity:0}
+.g{display:inline-block;position:relative;--wg:400;--cx:0px;--cy:0px;--co:0;font-weight:var(--wg)}
+.bl{display:inline-block;width:0;height:0;vertical-align:baseline}
+.l[data-fx=chroma] .g::before,.l[data-fx=chroma] .g::after{content:attr(data-ch);position:absolute;left:0;top:0;opacity:var(--co);mix-blend-mode:multiply;pointer-events:none}
+.l[data-fx=chroma] .g::before{color:#ff5a8a;transform:translate3d(var(--cx),var(--cy),0)}
+.l[data-fx=chroma] .g::after{color:#2b9dff;transform:translate3d(calc(var(--cx) * -1),calc(var(--cy) * -1),0)}
+.tag{font-weight:300;font-size:clamp(15px,1.5vw,21px);letter-spacing:.01em;color:#34302c;text-wrap:balance}
+.tag em{font-family:"Bodoni Moda",serif;font-size:1.14em;letter-spacing:0}
+.w{display:inline-block;opacity:0;transform:translateY(14px)}
+.foot{position:fixed;left:0;right:0;bottom:max(12px,env(safe-area-inset-bottom));z-index:5;display:flex;justify-content:center;align-items:center;gap:clamp(16px,3vw,32px);opacity:0;pointer-events:none}
+.foot i{width:3px;height:3px;border-radius:50%;background:#8a837b}
+.btn{pointer-events:auto;font-family:"Geist Mono",ui-monospace,monospace;font-size:11px;line-height:14px;letter-spacing:.16em;text-transform:uppercase;color:#3d3833;position:relative;padding:15px 2px;outline:none}
+.btn::after{content:"";position:absolute;left:2px;right:2px;bottom:10px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .7s cubic-bezier(.2,.7,.1,1)}
+.btn:focus-visible::after{transform:scaleX(1);transform-origin:left}
+[hidden]{display:none!important}
+dialog{position:fixed;inset:0;width:100%;height:100%;max-width:100%;max-height:100%;margin:0;padding:0;border:0;background:none;color:inherit;overflow:auto;overscroll-behavior:contain;outline:none}
+dialog[open]{display:flex}
+dialog::backdrop{background:transparent}
+.x{position:absolute;top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right));z-index:1;width:44px;height:44px;border-radius:50%;outline:none;transition:transform .6s cubic-bezier(.2,.7,.1,1)}
+.x::before,.x::after{content:"";position:absolute;left:50%;top:50%;width:18px;height:1px;background:currentColor;transform:translate(-50%,-50%) rotate(45deg)}
+.x::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.x:focus-visible{transform:rotate(90deg);box-shadow:0 0 0 1px currentColor}
+#about{color:var(--paper);cursor:pointer}
+.ab-disc{position:fixed;left:0;top:0;width:100%;height:100%;background:var(--ink);pointer-events:none;will-change:transform}
+.ab-glow{position:fixed;left:0;top:0;width:80vmax;height:80vmax;margin:-40vmax 0 0 -40vmax;border-radius:50%;background:radial-gradient(closest-side,rgba(249,206,186,.2),rgba(206,196,246,.08) 55%,transparent);pointer-events:none;opacity:0;will-change:transform}
+.ab-in{position:relative;margin:auto;width:min(1080px,100%);padding:clamp(24px,6vw,72px);padding-left:max(clamp(24px,6vw,72px),env(safe-area-inset-left));padding-right:max(clamp(24px,6vw,72px),env(safe-area-inset-right));display:grid;gap:clamp(20px,3vw,36px)}
+.ab-k{font-family:"Geist Mono",ui-monospace,monospace;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a9a199}
+.ab-tx{font-family:"Bodoni Moda",serif;font-size:clamp(27px,4.4vw,62px);line-height:1.12;letter-spacing:-.012em;text-wrap:pretty}
+.wm{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .12em;margin:0 -.06em -.12em}
+.wi{display:inline-block}
+#contact{padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));user-select:text;-webkit-user-select:text}
+.ct-scrim{position:fixed;inset:0;background:rgba(246,241,234,.32);opacity:0}
+.ct{position:relative;margin:auto;width:min(460px,100%);padding:var(--pad);border-radius:22px;outline:none;color:var(--ink);background:radial-gradient(420px circle at var(--mx,30%) var(--my,0%),rgba(255,255,255,.75),transparent 65%),rgba(250,247,242,.74);-webkit-backdrop-filter:blur(24px) saturate(1.5);backdrop-filter:blur(24px) saturate(1.5);border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 40px 80px -30px rgba(60,40,30,.35),0 12px 30px -18px rgba(60,40,30,.25)}
+.ct .x{top:calc(var(--pad) + clamp(16px,2.5vw,21px) - 20px);right:calc(var(--pad) - 16px)}
+.ct-t{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(32px,5vw,42px);line-height:1;letter-spacing:-.01em;margin-bottom:28px;padding-right:40px}
+.ct-f{display:grid;gap:22px}
+.fld{display:grid;gap:8px;position:relative}
+.fld span{font-family:"Geist Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#5a534c}
+.fld input,.fld textarea{font-family:Geist,system-ui,sans-serif;font-size:16px;line-height:1.45;color:var(--ink);background:none;border:0;border-bottom:1px solid rgba(28,26,25,.22);border-radius:0;padding:6px 0 10px;outline:none;width:100%;resize:none;-webkit-appearance:none;appearance:none}
+.fld textarea{min-height:128px;display:block}
+.fld ::placeholder{color:#8f877f;opacity:1}
+.fld::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.2,.7,.1,1)}
+.fld:focus-within::after{transform:scaleX(1)}
+.ct-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:6px}
+.send{display:inline-flex;align-items:center;gap:12px;height:48px;padding:0 22px;border-radius:999px;background:var(--ink);color:var(--paper);font-size:14px;letter-spacing:.02em;outline:none;transition:transform .5s cubic-bezier(.2,.7,.1,1)}
+.send .ar{transition:transform .5s cubic-bezier(.2,.7,.1,1)}
+.send:active{transform:scale(.97)}
+.send:disabled{opacity:.6;cursor:progress}
+.send:focus-visible{box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--ink)}
+.ct-msg{font-size:13px;line-height:1.4;color:#9b3b2f}
+.ct-msg:empty{display:none}
+.ct-done{font-weight:300;font-size:17px;line-height:1.5;color:#34302c;text-wrap:pretty}
+@media (hover:hover){
+.btn:hover::after{transform:scaleX(1);transform-origin:left}
+.x:hover{transform:rotate(90deg)}
+.send:hover .ar{transform:translateX(4px)}
 }
-  </script>
+.nogsap .l,.nogsap .w,.nogsap .foot{opacity:1;transform:none}
+</style>
+<noscript><style>.l,.w,.foot{opacity:1!important;transform:none!important}</style></noscript>
+<script>window.__enf=setTimeout(function(){document.documentElement.classList.add('nogsap')},5000)</script>
 </head>
 <body>
+<canvas id="bg"></canvas>
+<canvas id="threads"></canvas>
 <main>
-  <section>
-    <h1>Enfunc</h1>
-    <h2>Unleashing potential, accelerating progress</h2>
-    <p>
-      Our technology empowers millions across industries and borders daily.
-      Say hi at <a href="mailto:hello@enfunc.com">hello@enfunc.com</a>.
-    </p>
-    <div class="logos">
-      <a href="https://www.starsgroup.com/" target="_blank"><img src="media/logo_stars.webp" alt="The Stars Group" title="The Stars Group"></a><a href="https://www.lloydsbankinggroup.com/" target="_blank"><img src="media/logo_lloyds.webp" alt="Lloyds Banking Group" title="Lloyds Banking Group"></a><a href="https://www.nhs.uk/" target="_blank"><img src="media/logo_nhs.webp" alt="NHS" title="NHS"></a><a href="https://www.pfizer.com/" target="_blank"><img src="media/logo_pfizer.webp" alt="Pfizer" title="Pfizer"></a><a href="https://auth0.com/" target="_blank"><img src="media/logo_auth0.webp" alt="Auth0" title="Auth0"></a><a href="https://www.array.com/" target="_blank"><img src="media/logo_array.webp" alt="Array" title="Array"></a><a href="https://www.celtra.com/" target="_blank"><img src="media/logo_celtra.webp" alt="Celtra" title="Celtra"></a>
-    </div>
-  </section>
+  <h1 class="mark" aria-label="Enfunc">
+    <span class="l" data-fx="weight" aria-hidden="true"><span class="g" data-ch="E">E<i class="bl"></i></span></span><span class="l" data-fx="magnet" aria-hidden="true"><span class="g" data-ch="n">n<i class="bl"></i></span></span><span class="l" data-fx="chroma" aria-hidden="true"><span class="g" data-ch="f">f<i class="bl"></i></span></span><span class="l" data-fx="liquid" aria-hidden="true"><span class="g" data-ch="u">u<i class="bl"></i></span></span><span class="l" data-fx="scatter" aria-hidden="true"><span class="g" data-ch="n">n<i class="bl"></i></span></span><span class="l" data-fx="spin" aria-hidden="true"><span class="g" data-ch="c">c<i class="bl"></i></span></span>
+  </h1>
+  <p class="tag"><span class="w">Great</span> <span class="w">ideas,</span> <em class="w">great</em> <em class="w">engineering.</em></p>
 </main>
+<canvas id="fx" width="0" height="0"></canvas>
+<footer class="foot"><button class="btn" type="button" data-open="about" aria-haspopup="dialog">What we do</button><i aria-hidden="true"></i><button class="btn" type="button" data-open="contact" aria-haspopup="dialog">Get in touch</button></footer>
+<dialog id="about" aria-labelledby="ab-k">
+  <div class="ab-disc" aria-hidden="true"></div>
+  <div class="ab-glow" aria-hidden="true"></div>
+  <div class="ab-in">
+    <h2 class="ab-k" id="ab-k">What we do</h2>
+    <p class="ab-tx">We're a <em>product company.</em> Occasionally, we lend our brains and hands to other people's toughest technical challenges. We're based in Oslo, Norway but operate globally.</p>
+  </div>
+  <button class="x" type="button" data-close aria-label="Close"></button>
+</dialog>
+<dialog id="contact" aria-labelledby="ct-t">
+  <div class="ct-scrim" aria-hidden="true"></div>
+  <div class="ct" tabindex="-1" autofocus>
+    <h2 class="ct-t ct-st" id="ct-t">Get in <em>touch</em></h2>
+    <form class="ct-f" action="https://formspree.io/f/mbggrngn" method="POST">
+      <label class="fld ct-st"><span>Email</span><input type="email" name="email" required maxlength="254" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" placeholder="you@company.com"></label>
+      <label class="fld ct-st"><span>What's on your mind?</span><textarea name="message" rows="5" required maxlength="5000"></textarea></label>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+      <div class="ct-row ct-st"><button class="send" type="submit"><span class="lb">Send</span><span class="ar" aria-hidden="true">→</span></button><p class="ct-msg" role="alert"></p></div>
+    </form>
+    <p class="ct-done" role="status" hidden>Thank you — your message is on its way. We'll be in touch soon.</p>
+    <button class="x" type="button" data-close aria-label="Close"></button>
+  </div>
+</dialog>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="liquid" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.011 0.032" numOctaves="2" seed="7"></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" scale="0" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+  </filter>
+</svg>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" integrity="sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc" crossorigin="anonymous"></script>
 <script>
-if (window.location.origin.includes("enfunc.com")) {
-  (function(window, document, dataLayerName, id) {
-    window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
-    function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString();f="; SameSite=Strict"}document.cookie=a+"="+b+d+f+"; path=/"}
-    var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
-    var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
-    tags.async=!0,tags.src="https://enfunc.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
-    !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
-  })(window, document, 'dataLayer', '4466da6e-a361-42fc-8ea2-e93fc3e9c75b');
+(() => {
+'use strict';
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const TOUCH = matchMedia('(hover: none)').matches;
+const clamp = (v, a = 0, b = 1) => v < a ? a : v > b ? b : v;
+const sstep = (a, b, v) => { const k = clamp((v - a) / (b - a)); return k * k * (3 - 2 * k); };
+const ease = k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+const INK = '#1c1a19';
+const foot = $('.foot');
+
+if (!window.gsap) {
+  // graceful fallback: static page, plain dialogs, native form POST
+  clearTimeout(window.__enf);
+  document.documentElement.classList.add('nogsap');
+  $$('[data-open]').forEach(b => b.addEventListener('click', () => $('#' + b.dataset.open).showModal()));
+  $$('[data-close]').forEach(b => b.addEventListener('click', () => b.closest('dialog').close()));
+  return;
 }
+foot.inert = true;
+document.fonts?.load('400 16px Geist').catch(() => {});
+
+let W = Math.max(1, innerWidth), H = Math.max(1, innerHeight), S = 1, S2 = 1, Q = 1;
+const ptr = { x: W / 2, y: H / 2, sx: W / 2, sy: H / 2, pres: 0, active: false, until: 0, dirty: false };
+const intro = { v: 0 };
+let ready = false, covered = false, openD = null;
+
+/* palettes — slow pastel drift, packed for a single uniform upload */
+const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16) / 255);
+const PAL = [
+  ['#f9d4c2', '#ddd0f6', '#c4e0f4', '#fbe7bc'],
+  ['#c9ecdc', '#f6d3e1', '#d3dcfa', '#f4eec8'],
+  ['#fcdccb', '#cfe9f1', '#ebd0ef', '#dcedc9'],
+  ['#f3d0c8', '#d4cff3', '#fae4c2', '#c6e3e8']
+].map(p => Float32Array.from(p.flatMap(hex)));
+const HOLD = 9, FADE = 5, COL = new Float32Array(12);
+function palette(t) {
+  const span = HOLD + FADE, n = Math.floor(t / span), a = PAL[n % PAL.length], b = PAL[(n + 1) % PAL.length], f = t % span;
+  const k = f < HOLD ? 0 : sstep(0, 1, (f - HOLD) / FADE);
+  for (let i = 0; i < 12; i++) COL[i] = a[i] + (b[i] - a[i]) * k;
+}
+
+/* WebGL background: domain-warped fluid + orbs + cursor-warped grid */
+const VS = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+const FS = `#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+uniform vec2 uRes,uMouse;uniform float uDpr,uT,uIntro,uPres,uCell;uniform vec3 uC[4];
+const vec3 INK=vec3(.11,.102,.098),PAPER=vec3(.965,.945,.918);
+float h(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}
+float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+1.),f.x),f.y);}
+const mat2 R=mat2(.8,.6,-.6,.8);
+float fbm3(vec2 p){float v=.5*n(p);p=R*p*2.02+17.;v+=.25*n(p);p=R*p*2.02+17.;return v+.125*n(p);}
+float fbm4(vec2 p){float v=fbm3(p);p=R*(R*(R*p*2.02+17.)*2.02+17.)*2.02+17.;return v+.0625*n(p);}
+float orb(vec2 p,vec2 c,float r){vec2 d=p-c;return exp(-dot(d,d)/(r*r));}
+void main(){
+  vec2 fc=gl_FragCoord.xy;float mn=min(uRes.x,uRes.y),t=uT;
+  vec2 uv=(fc-.5*uRes)/mn,mu=(uMouse-.5*uRes)/mn,ax=uRes/mn;
+  vec2 md=uv-mu;float lens=exp(-dot(md,md)*9.)*uPres;
+  vec2 p=uv*1.35;
+  vec2 q=vec2(fbm3(p+vec2(0.,t*.04)),fbm3(p+vec2(5.2,1.3)-t*.035));
+  float f=fbm4(p+1.7*q+md*lens*.7+t*.02);
+  vec3 c=mix(uC[0],uC[1],smoothstep(.25,.75,f));
+  c=mix(c,uC[2],smoothstep(.3,.85,q.y)*.75);
+  vec2 o0=mix(vec2(sin(t*.071+1.)*.42*ax.x,cos(t*.053+.4)*.34*ax.y),mu,.45*uPres);
+  c=mix(c,uC[3],orb(uv,o0,.36+.04*sin(t*.2))*.75);
+  c=mix(c,uC[1],orb(uv,vec2(cos(t*.047+2.3)*.48*ax.x,sin(t*.061+1.7)*.4*ax.y),.46)*.55);
+  c=mix(c,uC[2],orb(uv,vec2(sin(t*.039+4.1)*.5*ax.x,sin(t*.067+.9)*.42*ax.y),.5)*.5);
+  c=mix(c,uC[0],orb(uv,vec2(cos(t*.058+5.)*.38*ax.x,cos(t*.044+3.2)*.36*ax.y),.34)*.5);
+  c=mix(vec3(dot(c,vec3(.333))),c,1.3);
+  c=mix(c,PAPER,.1)+lens*.035;
+  vec2 px=(fc-.5*uRes)/uDpr,d=(fc-uMouse)/uDpr;
+  float L=exp(-dot(d,d)/48400.)*uPres;
+  vec2 g=abs(fract((px-d*L*.3+(q-.5)*16.)/uCell+.5)-.5)*uCell;
+  float aa=1./uDpr;
+  c=mix(c,INK,(1.-smoothstep(.3,.3+aa,min(g.x,g.y)))*(.05+.13*L)*(1.-.35*length(uv)));
+  c=mix(c,INK,(1.-smoothstep(1.,1.+aa,length(g)))*L*.3);
+  c*=1.-.045*dot(uv,uv);
+  c=mix(PAPER,c,uIntro);
+  gl_FragColor=vec4(c+(h(fc+fract(t))-.5)/255.,1.);
+}`;
+const cv = $('#bg');
+let gl = null, U = {};
+function initGL() {
+  try {
+    gl = cv.getContext('webgl', { antialias: false, alpha: false, depth: false, stencil: false, preserveDrawingBuffer: false, powerPreference: 'high-performance' });
+    if (!gl) throw 0;
+    const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw gl.getShaderInfoLog(s); return s; };
+    const pr = gl.createProgram();
+    gl.attachShader(pr, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FS));
+    gl.bindAttribLocation(pr, 0, 'p'); gl.linkProgram(pr);
+    if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) throw gl.getProgramInfoLog(pr);
+    gl.useProgram(pr);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+    for (const k of ['uRes', 'uMouse', 'uDpr', 'uT', 'uIntro', 'uPres', 'uCell', 'uC']) U[k] = gl.getUniformLocation(pr, k);
+  } catch (e) { gl = null; cv.style.display = 'none'; document.documentElement.classList.add('nogl'); }
+}
+cv.addEventListener('webglcontextlost', e => { e.preventDefault(); gl = null; });
+cv.addEventListener('webglcontextrestored', () => { initGL(); sizeGL(); });
+initGL();
+
+function sizeGL() {
+  S = Math.min(devicePixelRatio || 1, 1.5) * Q;
+  if (W * H * S * S > 2.6e6) S = Math.sqrt(2.6e6 / (W * H));
+  cv.width = Math.round(W * S); cv.height = Math.round(H * S);
+  if (!gl) return;
+  gl.viewport(0, 0, cv.width, cv.height);
+  gl.uniform2f(U.uRes, cv.width, cv.height);
+  gl.uniform1f(U.uDpr, cv.width / W);
+  gl.uniform1f(U.uCell, clamp(Math.min(W, H) / 11, 40, 72));
+}
+
+/* flow-field threads — batched into 3 alpha bands that fade out around the wordmark */
+const tc = $('#threads'), tx = tc.getContext('2d');
+const BAND = [0, .3, .62, 1];
+let P = [], SEG = new Float32Array(0), BND = new Uint8Array(0), frame = 0;
+const spawn = (p, init) => { p.x = Math.random() * W; p.y = Math.random() * H; p.life = 160 + Math.random() * 360; p.age = init ? Math.random() * p.life : 0; return p; };
+const field = (x, y, t) => (Math.sin(x * .0023 + t * .09) + Math.sin(y * .0031 - t * .07) + Math.sin((x - y) * .0014 + t * .05)) * 1.25;
+function threads(t, k) {
+  if (++frame % 3 === 0) { tx.globalCompositeOperation = 'destination-out'; tx.globalAlpha = .08; tx.fillRect(0, 0, tc.width, tc.height); tx.globalCompositeOperation = 'source-over'; }
+  const R2 = 32400, sp = .65 * k, hw = W / 2, hh = H / 2, ew = 1 / (W * .42), eh = 1 / (H * .3), on = ptr.pres > .01;
+  for (let i = 0; i < P.length; i++) {
+    const p = P[i], a = field(p.x, p.y, t);
+    let vx = Math.cos(a), vy = Math.sin(a);
+    if (on) {
+      const dx = p.x - ptr.sx, dy = p.y - ptr.sy, d2 = dx * dx + dy * dy;
+      if (d2 < R2) { const d = Math.sqrt(d2) + 1, s = (1 - d2 / R2) * ptr.pres * 1.6; vx -= dy / d * s; vy += dx / d * s; }
+    }
+    const nx = p.x + vx * sp, ny = p.y + vy * sp, ex = (nx - hw) * ew, ey = (ny - hh) * eh;
+    const m = sstep(.35, 1, Math.sqrt(ex * ex + ey * ey));
+    BND[i] = m < .12 ? 0 : m < .45 ? 1 : m < .8 ? 2 : 3;
+    const o = i * 4; SEG[o] = p.x * S2; SEG[o + 1] = p.y * S2; SEG[o + 2] = nx * S2; SEG[o + 3] = ny * S2;
+    p.x = nx; p.y = ny;
+    if (++p.age > p.life || nx < -20 || ny < -20 || nx > W + 20 || ny > H + 20) spawn(p);
+  }
+  for (let b = 1; b < 4; b++) {
+    tx.globalAlpha = BAND[b]; tx.beginPath();
+    for (let i = 0; i < P.length; i++) if (BND[i] === b) { const o = i * 4; tx.moveTo(SEG[o], SEG[o + 1]); tx.lineTo(SEG[o + 2], SEG[o + 3]); }
+    tx.stroke();
+  }
+}
+
+/* fx canvas — backing store only allocated while a scatter burst runs */
+const fx = $('#fx'), fctx = fx.getContext('2d');
+let burst = null;
+
+function resize() {
+  W = Math.max(1, innerWidth); H = Math.max(1, innerHeight);
+  S2 = Math.min(devicePixelRatio || 1, 2);
+  if (W * H * S2 * S2 > 4e6) S2 = Math.sqrt(4e6 / (W * H));
+  sizeGL();
+  tc.width = Math.round(W * S2); tc.height = Math.round(H * S2);
+  tx.strokeStyle = INK; tx.fillStyle = '#000'; tx.lineWidth = .75 * S2; tx.lineCap = 'round';
+  const n = RM ? 0 : Math.round(Math.min(240, W * H / 6500));
+  if (n !== P.length) {
+    P.length = Math.min(P.length, n);
+    while (P.length < n) P.push(spawn({}, true));
+    SEG = new Float32Array(n * 4); BND = new Uint8Array(n);
+  }
+  for (const p of P) if (p.x > W || p.y > H) spawn(p, true);
+}
+resize();
+
+/* letter effects */
+const fsOf = g => parseFloat(getComputedStyle(g).fontSize);
+const lqDisp = $('#liquid feDisplacementMap');
+const canvas2d = (w, h) => { if (window.OffscreenCanvas) return new OffscreenCanvas(w, h); const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const FX = {
+  weight(el, x, y, demo) {
+    gsap.to(el.firstElementChild, { '--wg': 900, duration: .9, ease: 'expo.out', overwrite: true, ...(demo && { yoyo: true, repeat: 1, repeatDelay: .3 }) });
+  },
+  chroma(el) {
+    const g = el.firstElementChild; if (g._b) return; g._b = 1;
+    const fs = fsOf(g), tl = gsap.timeline({ onComplete: () => g._b = 0 });
+    tl.set(g, { '--co': 1 });
+    for (let i = 0; i < 4; i++) tl.to(g, { '--cx': (Math.random() - .5) * fs * .16 + 'px', '--cy': (Math.random() - .5) * fs * .05 + 'px', duration: .055, ease: 'none' });
+    tl.to(g, { '--cx': fs * .045 + 'px', '--cy': '0px', duration: .3, ease: 'power3.out' })
+      .to(g, { '--cx': '0px', duration: 1.2, ease: 'expo.inOut' }, '+=.2')
+      .set(g, { '--co': 0 });
+    gsap.fromTo(g, { skewX: 0 }, { skewX: -7, duration: .06, yoyo: true, repeat: 3, ease: 'none' });
+  },
+  liquid(el) {
+    const g = el.firstElementChild; if (g._b) return; g._b = 1;
+    const fs = fsOf(g), o = { s: 0 };
+    g.style.filter = 'url(#liquid)';
+    gsap.timeline({
+      onUpdate() { lqDisp.setAttribute('scale', o.s.toFixed(1)); },
+      onComplete() { g.style.filter = ''; g._b = 0; }
+    }).to(o, { s: fs * .2, duration: .45, ease: 'power2.out' })
+      .to(o, { s: 0, duration: 1.8, ease: 'elastic.out(1,.35)' });
+  },
+  scatter(el, px, py) {
+    const g = el.firstElementChild; if (g._b) return; g._b = 1;
+    const r = g.getBoundingClientRect(), base = g.lastElementChild.getBoundingClientRect().top, cs = getComputedStyle(g), fs = parseFloat(cs.fontSize);
+    const pad = Math.ceil(fs * .25), w = Math.ceil(r.width) + pad * 2, h = Math.ceil(r.height) + pad * 2;
+    const o = canvas2d(w, h).getContext('2d', { willReadFrequently: true });
+    o.font = `${cs.fontWeight} ${fs}px ${cs.fontFamily}`; o.fillText(g.dataset.ch, pad, base - r.top + pad);
+    const d = o.getImageData(0, 0, w, h).data, st = Math.max(2, Math.round(fs / 85));
+    const cx = px ?? r.left + r.width / 2, cy = py ?? r.top + r.height / 2, pts = [];
+    for (let y = 0; y < h; y += st) for (let x = 0; x < w; x += st) {
+      if (d[(y * w + x) * 4 + 3] < 110) continue;
+      const hx = r.left - pad + x, hy = r.top - pad + y, a = Math.atan2(hy - cy, hx - cx) + (Math.random() - .5) * 1.2, dist = fs * (.08 + Math.pow(Math.random(), 1.6) * .55);
+      pts.push(hx, hy, Math.cos(a) * dist, Math.sin(a) * dist, (Math.random() - .5) * 1.8, st * (.5 + Math.random() * .45));
+    }
+    burst = { pts: Float32Array.from(pts), g, t0: performance.now() };
+    fx.width = Math.round(W * S2); fx.height = Math.round(H * S2);
+    fctx.setTransform(S2, 0, 0, S2, 0, 0); fctx.fillStyle = INK;
+    g.style.opacity = 0; fx.style.visibility = 'visible';
+  },
+  spin(el) {
+    const g = el.firstElementChild; if (g._b) return; g._b = 1;
+    const fs = fsOf(g);
+    gsap.timeline({ onComplete: () => g._b = 0 })
+      .to(g, { rotationY: '+=360', transformPerspective: fs * 4, duration: 1.6, ease: 'expo.inOut' }, 0)
+      .to(g, { y: -fs * .06, duration: .8, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 0);
+  }
+};
+function drawBurst(now) {
+  const t = (now - burst.t0) / 1000;
+  if (t > 2.15) { burst.g.style.opacity = ''; burst.g._b = 0; burst = null; fx.style.visibility = 'hidden'; fx.width = fx.height = 0; return; }
+  fctx.clearRect(0, 0, W, H);
+  const out = 1 - Math.pow(1 - Math.min(t / .6, 1), 4), back = t < .75 ? 0 : ease(Math.min((t - .75) / 1.1, 1)), a = out * (1 - back);
+  burst.g.style.opacity = clamp((t - 1.6) / .5);
+  fctx.globalAlpha = 1 - clamp((t - 1.65) / .5);
+  const q = burst.pts;
+  for (let i = 0; i < q.length; i += 6) {
+    const r = q[i + 4] * a, c = Math.cos(r), s = Math.sin(r), ox = q[i + 2] * a, oy = q[i + 3] * a;
+    fctx.fillRect(q[i] + ox * c - oy * s, q[i + 1] + ox * s + oy * c, q[i + 5], q[i + 5]);
+  }
+}
+
+/* pointer — events only record; hit-testing happens at the start of the frame, before any style writes */
+let hov = null, lastInput = 0;
+function setHover(l, x, y) {
+  if (l === hov) return;
+  if (hov && hov.dataset.fx === 'weight') gsap.to(hov.firstElementChild, { '--wg': 400, duration: 1.6, ease: 'power3.inOut', overwrite: true });
+  hov = l;
+  if (l && ready) FX[l.dataset.fx]?.(l, x, y);
+}
+function hitTest() {
+  const el = document.elementFromPoint(ptr.x, ptr.y);
+  setHover(el && el.closest('.l'), ptr.x, ptr.y);
+}
+const track = e => { ptr.x = e.clientX; ptr.y = e.clientY; ptr.active = true; ptr.dirty = true; };
+addEventListener('pointermove', track, { passive: true });
+addEventListener('pointerdown', e => { track(e); lastInput = performance.now(); if (ready && !openD) { hitTest(); ptr.dirty = false; } }, { passive: true });
+const release = e => { if (e.pointerType !== 'mouse') { ptr.active = false; ptr.until = performance.now() + 1200; setHover(null); } };
+addEventListener('pointerup', release, { passive: true });
+addEventListener('pointercancel', release, { passive: true });
+addEventListener('pointerout', e => { if (!e.relatedTarget && e.pointerType === 'mouse') { ptr.active = false; ptr.until = 0; setHover(null); } }, { passive: true });
+addEventListener('blur', () => { ptr.active = false; setHover(null); });
+
+/* idle demo on touch screens: occasionally wake a letter */
+if (TOUCH) setInterval(() => {
+  if (!ready || openD || document.hidden || ptr.active || performance.now() - lastInput < 6000) return;
+  const ls = $$('.l').filter(l => l.dataset.fx !== 'magnet'), l = ls[Math.random() * ls.length | 0];
+  FX[l.dataset.fx](l, undefined, undefined, true);
+}, 6500);
+
+/* magnetic letter — damped spring; rect read happens before writes; no DOM writes at rest */
+const mg = { g: $('.l[data-fx=magnet] .g'), x: 0, y: 0, vx: 0, vy: 0, rest: true };
+function magnet(k, r) {
+  let tx = 0, ty = 0;
+  if (r) {
+    const cx = r.left + r.width / 2 - mg.x, cy = r.top + r.height / 2 - mg.y;
+    const dx = ptr.x - cx, dy = ptr.y - cy, R = r.width * 1.9, d2 = dx * dx + dy * dy;
+    if (d2 < R * R) { const f = (1 - d2 / (R * R)) * ptr.pres; tx = dx * .38 * f; ty = dy * .38 * f; }
+  }
+  if (mg.rest && !tx && !ty) return;
+  const damp = Math.pow(.8, k);
+  mg.vx = (mg.vx + (tx - mg.x) * .1 * k) * damp; mg.vy = (mg.vy + (ty - mg.y) * .1 * k) * damp;
+  mg.x += mg.vx * k; mg.y += mg.vy * k;
+  mg.rest = !tx && !ty && Math.abs(mg.x) + Math.abs(mg.y) + Math.abs(mg.vx) + Math.abs(mg.vy) < .02;
+  mg.g.style.transform = mg.rest ? '' : `translate3d(${mg.x.toFixed(2)}px,${mg.y.toFixed(2)}px,0) rotate(${(mg.vx * .9).toFixed(2)}deg)`;
+}
+
+/* adaptive quality: if a 60Hz display can't hold frame rate, lower shader resolution (twice at most) */
+let fAcc = 0, fN = 0, fMin = 1e9, drops = 0;
+function adapt(dt) {
+  if (drops > 1 || dt > 100) return;
+  fAcc += dt; fMin = Math.min(fMin, dt);
+  if (++fN < 120) return;
+  if (fAcc / fN > 21 && fMin < 26) { Q *= .78; drops++; sizeGL(); }
+  fAcc = fN = 0; fMin = 1e9;
+}
+
+/* main loop — prioritized so layout reads run before GSAP writes styles this frame */
+const main = $('main'), mark = $('.mark'), tag = $('.tag'), T0 = performance.now();
+let px0 = 1e9, py0 = 1e9;
+gsap.ticker.add((time, dt) => {
+  const now = performance.now(), k = Math.min(dt / 16.667, 3), t = (now - T0) / 1000 * (RM ? .25 : 1);
+  ptr.pres += ((ptr.active || now < ptr.until ? 1 : 0) - ptr.pres) * (1 - Math.pow(.96, k));
+  const sm = 1 - Math.pow(.9, k);
+  ptr.sx += (ptr.x - ptr.sx) * sm; ptr.sy += (ptr.y - ptr.sy) * sm;
+  const live = ready && !openD;
+  const mr = live && ptr.pres > .02 ? mg.g.getBoundingClientRect() : null;
+  if (ptr.dirty) { ptr.dirty = false; if (live) hitTest(); }
+  if (!covered) {
+    palette(t);
+    if (gl) {
+      const s = cv.width / W;
+      gl.uniform1f(U.uT, t); gl.uniform1f(U.uIntro, intro.v); gl.uniform1f(U.uPres, ptr.pres);
+      gl.uniform2f(U.uMouse, ptr.sx * s, (H - ptr.sy) * s);
+      gl.uniform3fv(U.uC, COL);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    }
+    if (P.length) threads(t, k);
+  }
+  if (ready) {
+    magnet(k, mr);
+    const nx = Math.round((ptr.sx / W - .5) * ptr.pres * 200) / 200, ny = Math.round((ptr.sy / H - .5) * ptr.pres * 200) / 200;
+    if (!covered && (nx !== px0 || ny !== py0)) {
+      px0 = nx; py0 = ny;
+      mark.style.transform = `translate3d(${(-nx * 14).toFixed(2)}px,${(-ny * 10).toFixed(2)}px,0)`;
+      tag.style.transform = `translate3d(${(-nx * 6).toFixed(2)}px,${(-ny * 4).toFixed(2)}px,0)`;
+    }
+    if (!openD) adapt(dt);
+  }
+  if (burst) drawBurst(now);
+}, false, true);
+
+/* dialogs — native <dialog> (focus trap, Esc, top layer). Big moves run on the compositor via WAAPI; GSAP handles text. */
+function splitWords(el) {
+  const frag = document.createDocumentFragment();
+  const walk = (node, it) => {
+    for (const n of [...node.childNodes]) {
+      if (n.nodeType !== 3) { walk(n, it || n.tagName === 'EM'); continue; }
+      for (const s of n.textContent.split(/(\s+)/)) {
+        if (!s) continue;
+        if (!s.trim()) { frag.append(' '); continue; }
+        const o = document.createElement('span'), i = document.createElement(it ? 'em' : 'span');
+        o.className = 'wm'; i.className = 'wi'; i.textContent = s; o.append(i); frag.append(o);
+      }
+    }
+  };
+  walk(el, false); el.replaceChildren(frag);
+  return [...el.querySelectorAll('.wi')];
+}
+const EXPO = 'cubic-bezier(.87,0,.13,1)', OUTX = 'cubic-bezier(.16,1,.3,1)';
+const ab = $('#about'), disc = $('.ab-disc', ab), abGlow = $('.ab-glow', ab), abWords = splitWords($('.ab-tx', ab)), abChrome = [$('.ab-k', ab), $('.x', ab)];
+const ct = $('#contact'), scrim = $('.ct-scrim', ct), card = $('.ct', ct), form = $('.ct-f', ct), done = $('.ct-done', ct), msg = $('.ct-msg', ct), send = $('.send', ct), sendLb = $('.lb', send), email = $('input[type=email]', ct), ctItems = $$('.ct-st', ct);
+const glowX = gsap.quickTo(abGlow, 'x', { duration: 1.4, ease: 'power3.out' }), glowY = gsap.quickTo(abGlow, 'y', { duration: 1.4, ease: 'power3.out' });
+let lastBtn = null, closing = false, sent = 0, pendingResize = false;
+
+const dim = on => {
+  main.style.willChange = 'transform,opacity';
+  gsap.to(main, { opacity: on ? .25 : 1, scale: on ? .975 : 1, force3D: true, duration: on ? .9 : 1.2, ease: 'expo.out', overwrite: true,
+    onComplete: on ? null : () => { gsap.set(main, { clearProps: 'opacity,transform' }); main.style.willChange = ''; } });
+};
+
+const About = {
+  el: ab, anim: null,
+  fit() {
+    const r = lastBtn.getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2, w = innerWidth, h = innerHeight;
+    const R = Math.ceil(Math.hypot(Math.max(x, w - x), Math.max(y, h - y))) + 2, s = disc.style;
+    s.left = x - R + 'px'; s.top = y - R + 'px'; s.width = s.height = 2 * R + 'px'; s.borderRadius = '50%';
+    return { x, y };
+  },
+  in() {
+    const o = this.fit();
+    this.anim = disc.animate([{ transform: 'scale(0)' }, { transform: 'scale(1)' }], { duration: RM ? 350 : 1100, easing: EXPO, fill: 'both' });
+    this.anim.finished.then(() => { if (openD === this && !closing) covered = true; }, () => {});
+    gsap.set(abGlow, { x: o.x, y: o.y, opacity: 0 });
+    gsap.set(abWords, { yPercent: 115, rotation: 4, transformOrigin: '0% 100%' });
+    gsap.set(abChrome, { opacity: 0 });
+    return gsap.timeline()
+      .to(abWords, { yPercent: 0, rotation: 0, duration: 1.3, ease: 'expo.out', stagger: .018 }, RM ? .1 : .5)
+      .to(abChrome, { opacity: 1, duration: .8 }, .75)
+      .to(abGlow, { opacity: 1, duration: 1.6, ease: 'power2.out' }, .8);
+  },
+  out() {
+    covered = false;
+    gsap.timeline()
+      .to(abWords, { yPercent: -115, duration: .42, ease: 'power3.in', stagger: .005 }, 0)
+      .to([...abChrome, abGlow], { opacity: 0, duration: .3 }, 0);
+    const a = this.anim;
+    return new Promise(res => gsap.delayedCall(.22, () => { a.updatePlaybackRate(-1.4); a.play(); a.finished.then(res, res); }));
+  },
+  reset() { this.anim?.cancel(); this.anim = null; }
+};
+
+const Contact = {
+  el: ct, anims: [],
+  in() {
+    if (sent === 2) { sent = 0; form.reset(); form.hidden = false; done.hidden = true; gsap.set([form, done], { clearProps: 'opacity,transform' }); }
+    else if (sent === 1) sent = 2;
+    msg.textContent = '';
+    this.anims.push(card.animate([{ transform: 'translateY(48px) scale(.94)', opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: RM ? 300 : 1100, easing: OUTX, fill: 'both' }));
+    const tl = gsap.timeline()
+      .fromTo(scrim, { opacity: 0 }, { opacity: 1, duration: .6, ease: 'power2.out' }, 0)
+      .fromTo(card, { '--mx': '-160px', '--my': '-80px' }, { '--mx': Math.round(card.offsetWidth * .3) + 'px', '--my': '0px', duration: 1.6, ease: 'expo.out' }, 0)
+      .fromTo(ctItems.filter(e => !e.closest('[hidden]')), { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'expo.out', stagger: .06, clearProps: 'transform,opacity' }, .12);
+    if (!TOUCH && !form.hidden) tl.call(() => email.focus({ preventScroll: true }), null, .35);
+    return tl;
+  },
+  out() {
+    gsap.to(scrim, { opacity: 0, duration: .5, delay: .05, overwrite: true });
+    const a = card.animate({ transform: 'translateY(28px) scale(.96)', opacity: 0 }, { duration: 380, easing: 'cubic-bezier(.5,0,.75,0)', fill: 'forwards' });
+    this.anims.push(a);
+    return a.finished;
+  },
+  reset() { this.anims.forEach(a => a.cancel()); this.anims = []; }
+};
+
+const D = { about: About, contact: Contact };
+function openDialog(name, btn) {
+  const d = D[name];
+  if (!d || openD) return;
+  lastBtn = btn; setHover(null); openD = d;
+  if (!d.el.open) d.el.showModal();
+  dim(true); d.tl = d.in();
+}
+function closeDialog() {
+  if (!openD || closing) return;
+  const d = openD; closing = true;
+  d.tl?.kill(); dim(false);
+  Promise.resolve(d.out()).catch(() => {}).then(() => { if (d.el.open) d.el.close(); });
+}
+for (const d of Object.values(D)) {
+  d.el.addEventListener('cancel', e => { e.preventDefault(); closeDialog(); });
+  d.el.addEventListener('close', () => {
+    if (openD !== d) return;
+    d.tl?.kill(); d.reset();
+    openD = null; closing = false; covered = false; dim(false);
+    if (pendingResize) { pendingResize = false; resize(); }
+  });
+}
+$$('[data-open]').forEach(b => b.addEventListener('click', () => openDialog(b.dataset.open, b)));
+$$('[data-close]').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); closeDialog(); }));
+ab.addEventListener('click', closeDialog);
+ab.addEventListener('pointermove', e => { glowX(e.clientX); glowY(e.clientY); }, { passive: true });
+let downOut = false;
+const isOut = t => t === ct || t === scrim;
+ct.addEventListener('pointerdown', e => downOut = isOut(e.target), { passive: true });
+ct.addEventListener('click', e => { if (downOut && isOut(e.target)) closeDialog(); });
+if (!TOUCH) card.addEventListener('pointermove', e => {
+  const r = card.getBoundingClientRect();
+  card.style.setProperty('--mx', (e.clientX - r.left | 0) + 'px');
+  card.style.setProperty('--my', (e.clientY - r.top | 0) + 'px');
+}, { passive: true });
+
+function showDone() {
+  if (!ct.open) { form.hidden = true; done.hidden = false; return; }
+  gsap.to(form, { opacity: 0, y: -12, duration: .4, ease: 'power2.in', onComplete() {
+    const h0 = card.offsetHeight; form.hidden = true; done.hidden = false; const h1 = card.offsetHeight;
+    card.focus({ preventScroll: true });
+    gsap.fromTo(card, { height: h0 }, { height: h1, duration: .8, ease: 'expo.inOut', clearProps: 'height' });
+    gsap.fromTo(done, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1, ease: 'expo.out', delay: .25 });
+  } });
+}
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (send.disabled) return;
+  send.disabled = true; sendLb.textContent = 'Sending'; msg.textContent = '';
+  try {
+    const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' }, signal: AbortSignal.timeout?.(15000) });
+    if (!r.ok) { const j = await r.json().catch(() => ({})); throw new Error(j.errors?.map(x => x.message).join(' ') || 'Something went wrong. Please try again.'); }
+    sent = ct.open ? 2 : 1;
+    showDone();
+  } catch (err) {
+    msg.textContent = /TypeError|TimeoutError|AbortError/.test(err.name) ? 'Network error. Please try again.' : err.message;
+  } finally { send.disabled = false; sendLb.textContent = 'Send'; }
+});
+
+/* resize — debounced; while a dialog is open, height-only changes (mobile keyboard, URL bar) are deferred */
+let rz;
+addEventListener('resize', () => {
+  if (openD === About) About.fit();
+  clearTimeout(rz);
+  rz = setTimeout(() => {
+    if (openD && Math.max(1, innerWidth) === W) { pendingResize = true; return; }
+    resize();
+  }, 150);
+}, { passive: true });
+
+/* intro */
+function start() {
+  clearTimeout(window.__enf);
+  document.documentElement.classList.remove('nogsap');
+  const d = RM ? .4 : 1;
+  gsap.set('.l', { yPercent: RM ? 0 : 38, filter: RM ? 'none' : 'blur(16px)' });
+  gsap.timeline()
+    .to(intro, { v: 1, duration: 2.6 * d, ease: 'power2.inOut' }, 0)
+    .fromTo(mark, { letterSpacing: RM ? '-.01em' : '.28em' }, { letterSpacing: '-.01em', duration: 2.4 * d, ease: 'expo.out' }, .15)
+    .to('.l', { opacity: 1, yPercent: 0, filter: 'blur(0px)', duration: 1.9 * d, ease: 'expo.out', stagger: .075 * d }, .15)
+    .call(() => { gsap.set('.l', { clearProps: 'filter,transform' }); ready = true; }, null, (.15 + 1.9 + .075 * 5) * d)
+    .to('.tag .w', { opacity: 1, y: 0, duration: 1.3 * d, ease: 'expo.out', stagger: .07 * d, clearProps: 'transform' }, 1.05 * d)
+    .to(tc, { opacity: .17, duration: 3 * d, ease: 'power1.inOut' }, .8 * d)
+    .to(foot, { opacity: 1, duration: 1.4 * d, onStart: () => { foot.inert = false; } }, 1.7 * d);
+}
+Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 1800))]).then(() => requestAnimationFrame(start));
+})();
 </script>
 </body>
 </html>
